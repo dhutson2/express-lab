@@ -14,3 +14,9 @@ app.get('/greeting/:name', (req, res) => {
     console.log(req.params)
     res.send(req.params)
 })
+
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+    let tip = (req.params['total']/req.params['tipPercentage'])
+    console.log(tip)
+    res.send(`${tip}`)
+})
