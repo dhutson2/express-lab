@@ -7,5 +7,10 @@ app.listen(3000, () => {
 });
 
 app.get('/greeting', (req, res) => {
-    res.send('hola hombre')
+    res.send('hola')
+})
+
+app.get('/greeting/:name', (req, res) => {
+    console.log(req.params)
+    res.send(req.params)
 })
